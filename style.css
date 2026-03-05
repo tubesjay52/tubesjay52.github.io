@@ -241,30 +241,45 @@ color:#888;
 /* MOBILE */
 @media(max-width:768px){
 
-.header-container{
-flex-direction:column;
-gap:15px;
-}
+    /* Header container stacked vertically for spacing */
+    .header-container{
+        flex-direction:column; /* logo on top, menu below */
+        align-items:center;
+        gap:10px;
+        position:relative; /* remove sticky effect */
+    }
 
-.menu{
-flex-direction:column;
-align-items:center;
-}
+    /* Menu stays horizontal */
+    .menu{
+        flex-direction:row; /* keep links horizontal */
+        flex-wrap:wrap;     /* wrap if too long */
+        justify-content:center;
+        gap:15px;           /* space between links */
+    }
 
-.hero h1{
-font-size:2.2rem;
-}
+    /* Hero text adjustment */
+    .hero-section h1{
+        font-size:2rem;
+    }
 
-.services-cards{
-flex-direction:column;
-align-items:center;
-}
+    /* Cards stack vertically */
+    .services-cards,
+    .portfolio-cards,
+    .mission-vision{
+        flex-direction:column;
+        align-items:center;
+    }
 
-.footer-container{
-flex-direction:column;
-text-align:center;
-}
+    /* Footer stack vertically */
+    .footer-container{
+        flex-direction:column;
+        text-align:center;
+    }
 
+    /* Remove sticky header */
+    .header{
+        position:relative;
+    }
 }
 
 /* ABOUT PAGE STYLES */
@@ -708,4 +723,5 @@ text-align:center;
     display:block;
     width:fit-content;
     margin:30px auto 0 auto;
+
 }
